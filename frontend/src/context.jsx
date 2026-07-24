@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
+// سطر جديد قمنا بإضافته ، سيتم تحويل طلب مثل axios.get('/api/products') تلقائياً إلى [https://modern-furniture-steel.onrender.com/api/products](https://modern-furniture-steel.onrender.com/api/products) في كل مكان في المشروع.
+axios.defaults.baseURL = 'https://modern-furniture-steel.onrender.com';
+
 const ShopContext = createContext();
 
 export const ShopProvider = ({ children }) => {
