@@ -1,34 +1,28 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import CategoryPage from './pages/CategoryPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import AdminPage from './pages/AdminPage';
-import CheckoutPage from './pages/CheckoutPage'; 
-import { ShopProvider } from './context';
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import CategoryPage from "./pages/CategoryPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import AdminPage from "./pages/AdminPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import { ShopProvider } from "./context";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
     <ShopProvider>
       <Router>
-        <div className="flex flex-col min-h-screen bg-neutral-950 text-white">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/category/:id" element={<CategoryPage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
-              <Route path="/admin" element={<AdminPage />} />
-              {/* ✅ 2. المسار الجديد */}
-              <Route path="/checkout" element={<CheckoutPage />} /> 
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/category/:id" element={<CategoryPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+          </Route>
+        </Routes>
       </Router>
     </ShopProvider>
   );
