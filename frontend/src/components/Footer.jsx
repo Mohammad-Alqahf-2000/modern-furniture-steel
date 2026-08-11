@@ -78,25 +78,25 @@ const Footer = () => {
               <li>
                 <button onClick={() => handleNavClick('')} className="flex items-center justify-start gap-3 text-gray-400 hover:text-gold-400 transition-colors cursor-pointer bg-transparent border-none p-0 outline-none">
                   <Home size={18} className="text-gold-500" />
-                  <span dir="ltr">Home</span>
+                  <span dir="ltr">الصفحة الرئيسية</span>
                 </button>
               </li>
               <li>
                 <button onClick={() => handleNavClick('products')} className="flex items-center justify-start gap-3 text-gray-400 hover:text-gold-400 transition-colors cursor-pointer bg-transparent border-none p-0 outline-none">
                   <Grid size={18} className="text-gold-500" />
-                  <span dir="ltr">Products</span>
+                  <span dir="ltr">المنتجات</span>
                 </button>
               </li>
               <li>
                 <button onClick={() => handleNavClick('about')} className="flex items-center justify-start gap-3 text-gray-400 hover:text-gold-400 transition-colors cursor-pointer bg-transparent border-none p-0 outline-none">
                   <Info size={18} className="text-gold-500" />
-                  <span dir="ltr">About us</span>
+                  <span dir="ltr">لمحة عنا</span>
                 </button>
               </li>
               <li>
                 <button onClick={() => handleNavClick('contact')} className="flex items-center justify-start gap-3 text-gray-400 hover:text-gold-400 transition-colors cursor-pointer bg-transparent border-none p-0 outline-none">
                   <Phone size={18} className="text-gold-500" />
-                  <span dir="ltr">Contact</span>
+                  <span dir="ltr">الاتصال</span>
                 </button>
               </li>
             </ul>
